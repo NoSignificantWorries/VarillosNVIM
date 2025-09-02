@@ -5,7 +5,12 @@ return {
         config = function()
             require("mason").setup()
         end,
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        lazy = false,
         opts = {
+            auto_install = true,
             ensure_installed = {
                 "lua_ls",
                 "pyright",
@@ -13,13 +18,6 @@ return {
                 "jsonls",
                 "yamlls",
             }
-        }
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        lazy = false,
-        opts = {
-            auto_install = true,
         },
     },
     {
